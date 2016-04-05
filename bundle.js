@@ -1,0 +1,1 @@
+!function(){"use strict";!function(t){console.log("new");var n={prefetch:!0,cacheLength:2,onStart:{duration:250,render:function(t){t.addClass("is-exiting"),e.restartCSSAnimations()}},onReady:{duration:0,render:function(t,n){t.removeClass("is-exiting"),t.html(n)}}},e=t("#main").smoothState(n).data("smoothState")}(jQuery)}();
