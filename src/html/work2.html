@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  
+  @include("includes/head.html")
+  
+  <body>
+    <div id="main" class="main">
+
+      @include("includes/navigation.html")
+
+      <section class="hero hero--work">
+        <div class="container">
+          <div class="row">
+            <div class="subhero-content">
+              <h2 class="subhero__title">
+                Work
+              </h2>
+              <h3 class="subhero__byline">
+                Wedding, Engagement,
+                <br>and Portraits
+              </h3>
+              <div class="work-filter">
+                <h3 class="filter__title">Filter By:</h3>
+                <ul class="filter-list">
+                  <li class="filter-list__item">Weddings</li>
+                  <li class="filter-list__item">Engagements</li>
+                  <li class="filter-list__item">Life Events</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work--list">
+        <div class="container">
+          <ul class="work-list">
+            @include("includes/work-list-item/daniel-and-miranda.html")
+            @include("includes/work-list-item/tony-and-rachel.html")
+            @include("includes/work-list-item/mike-and-kalena.html")
+            @include("includes/work-list-item/grant-and-katy.html")
+          </ul>
+          <a href="#" class="load-more">
+            Load More Work
+          </a>
+        </div>
+      </section>
+
+      <section class="blog-callout">
+        <div class="container">
+          <div class="col col-md-5">
+            <div class="blog-callout__image blog-callout__image--1">
+            </div>
+          </div>
+          <div class="col col-md-5">
+            <div class="blog-callout__image blog-callout__image--2">
+            </div>
+          </div>
+          <div class="col col-md-2">
+            <div class="blog-callout__cta">
+              <a href="#" class="blog-callout__cta-link">
+                View The Blog
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @include("includes/footer.html")
+
+    </div>
+
+    @include("includes/js-block.html")
+  </body>
+</html>

@@ -1,0 +1,90 @@
+/**
+ *  Define the navigation styles.
+ *
+ */
+
+.nav-header {
+  position: relative;
+  z-index: 10;
+  padding: 30px 0;
+}
+
+.nav-header--alt {
+  padding: 40px 0 15px;
+}
+
+.nav {
+  float: right;
+  display: none;
+
+  @include min($tablet) {
+    display: block;
+  }
+}
+
+.brand__link {
+  color: $primary;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 2px;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.nav__link {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+  padding: 0 15px;
+  font-size: 1.3rem;
+  font-family: $sans;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $black;
+  font-weight: 700;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $white;
+    background: $primary-light;
+    
+    &:before {
+      top: -15px;
+      background: $primary-light;
+    }
+
+    &:after {
+      bottom: -15px;
+      background: $primary-light;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    height: 15px;
+    width: 100%;
+    background: transparent;
+    transition: all 0.2s ease;
+  }
+
+  &:before {
+    top: 10px;
+  }
+
+  &:after {
+    bottom: 10px;
+  }
+}
