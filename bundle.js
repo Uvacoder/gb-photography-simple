@@ -1,1 +1,1 @@
-!function(){"use strict";!function(t){var n={prefetch:!0,cacheLength:2,onStart:{duration:500,render:function(t){t.addClass("is-exiting"),e.restartCSSAnimations()}},onReady:{duration:0,render:function(t,n){t.removeClass("is-exiting"),t.html(n)}}},e=t("#main").smoothState(n).data("smoothState")}(jQuery)}();
+!function(){"use strict";!function(e){e(".gallery").magnificPopup({delegate:"img",type:"image",mainClass:"mfp-fade",gallery:{enabled:!0,preload:[0,2],navigateByImgClick:!0}}),e(".gallery__image").unveil(200)}(jQuery)}();
