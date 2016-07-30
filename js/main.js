@@ -22,6 +22,9 @@
 
   $(document).on('ready', function() {
 
+    // Initiate objectFill Polyfill
+    $(function () { objectFitImages() });
+
     var winHeight = $(window).height(), 
         docHeight = $(document).height(),
         progressBar = $('progress'),
@@ -220,9 +223,10 @@
   // Barba.Pjax.start();
 
   // Carousel
-  if ($('.about').length) {
+  if ($('.section--about').length) {
     var sliderDotAmount = 3;
-    var $feature = $('.about');
+    var $feature = $('.section--about');
+    console.log('loading');
 
     $feature.each(function() {
       var $this = $(this);
@@ -233,6 +237,8 @@
 
       dotElements.on('click', function(e) {
         e.preventDefault();
+
+        console.log('clicked');
 
         var dotCTX = $(this);
         var currentPosition = $slider.attr('data-pos');
