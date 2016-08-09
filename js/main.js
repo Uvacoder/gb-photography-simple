@@ -223,24 +223,34 @@
   // Barba.Pjax.start();
 
   // Carousel
-  if ($('.section--about').length) {
+  if ($('.section--work').length) {
     var sliderDotAmount = 3;
-    var $feature = $('.section--about');
-    console.log('loading');
+    var $feature = $('.section--work');
 
+    // Loop through in case we want multiple sliders.
     $feature.each(function() {
       var $this = $(this);
       var $slider = $this.find('.slider');
       var dotElements = $this.find('.slider__dot');
       var indicatorElement = $this.find('.slider__indicator');
+      var recentWorkItem = $this.find('.recent-work-list li');
       var activeSlide;
 
+      // Clicking on the items will update the carousel.
       dotElements.on('click', function(e) {
         e.preventDefault();
-
-        console.log('clicked');
-
         var dotCTX = $(this);
+        UpdatePosition(dotCTX);
+      });
+
+      // Hover on recent work items will update the carousel.
+      recentWorkItem.hover(function() {
+        var dotCTX = $(this);
+        UpdatePosition(dotCTX);
+      })
+
+      // Updates the slider to move to the active position.
+      function UpdatePosition(dotCTX) {
         var currentPosition = $slider.attr('data-pos');
         var newPosition = dotCTX.attr('data-pos');
         var newDirection = newPosition > currentPosition ? 'right' : 'left';
@@ -261,12 +271,11 @@
           $sliderSlide.each(function() {
 
             if ($(this).attr('data-pos') === newPosition) {
-              
               $(this).addClass('is-active');
             }
           });
         }
-      });
+      }
     });
   }
 
