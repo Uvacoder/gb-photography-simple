@@ -223,9 +223,9 @@
   // Barba.Pjax.start();
 
   // Carousel
-  if ($('.section--work').length) {
+  if ($('.section--homepage').length) {
     var sliderDotAmount = 3;
-    var $feature = $('.section--work');
+    var $feature = $('.section--homepage');
 
     // Loop through in case we want multiple sliders.
     $feature.each(function() {
