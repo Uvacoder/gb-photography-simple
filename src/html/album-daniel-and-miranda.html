@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  
+  @include("includes/head.html")
+  
+  <body>
+    <div id="main" class="main main--gallery">
+
+      <div class="landing-container">
+        <img class="landing-image" src="images/album/d-and-m-2-min.jpg" alt="Daniel and Mirandas Wedding" />
+        <div id="album-cover" class="album-cover">
+          <header class="album-info-container">
+            <div class="album-info">
+              <h1 class="album-cover__title">
+                Daniel <span class="ampersand">and</span> Miranda
+              </h1>
+            </div>
+          </header>
+        </div>
+      </div>
+
+      @include("includes/navigation.html")
+
+      <div class="sticky-nav">
+        <div class="container">
+          <a href="work2.html" class="sticky-nav__back">
+            Back to Work
+          </a>
+          <h2 class="sticky-nav__album">
+            Daniel &amp; Miranda
+          </h2>
+          <a class="sticky-nav__to-top" onclick="scrollToTop();return false" href="#album-cover">
+            To Top
+          </a>
+        </div>
+        <progress class="progress" value="0"></progress>
+      </div>
+
+      <section class="gallery">
+        <div class="container container--gallery">
+          <div class="image-container image-container--60-40">
+            <img class="gallery__image" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-6-min.jpg" data-mfp-src="images/album/d-and-m-6-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">
+              1/12
+            </span>
+          </div>
+          <div class="image-container image-container--40-60">
+            <img class="gallery__image" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-5-min.jpg" data-mfp-src="images/album/d-and-m-5-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">2/12</span>
+          </div>
+          <div class="image-container image-container--1up">
+            <img class="gallery__image" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-14-min.jpg" data-count="11/12" data-mfp-src="images/album/d-and-m-14-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">3/12</span>
+          </div>
+
+          <div class="image-container image-container--3up">
+            <img class="gallery__image" data-count="10/12" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-13-min.jpg" data-mfp-src="images/album/d-and-m-13-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">4/12</span>
+          </div>
+          <div class="image-container image-container--3up image-container--3up--2">
+            <img class="gallery__image" data-count="3/12" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-10-min.jpg" data-mfp-src="images/album/d-and-m-10-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">5/12</span>
+          </div>
+          <div class="image-container image-container--3up image-container--3up--3">
+            <img class="gallery__image gallery-image--centered" src="images/placeholder-min.jpg" data-count="4/12" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-8-min.jpg" data-mfp-src="images/album/d-and-m-8-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">6/12</span>
+          </div>
+
+          <div class="image-container image-container--2up">
+            <img class="gallery__image" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-1-min.jpg" data-count="5/12" data-mfp-src="images/album/d-and-m-1-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">7/12</span>
+          </div>
+          <div class="image-container image-container--2up image-container--2up--2">
+            <img class="gallery__image" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-3-min.jpg" data-count="6/12" data-mfp-src="images/album/d-and-m-3-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">8/12</span>
+          </div>
+          <div class="image-container image-container--60-40">
+            <img class="gallery__image" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-4-min.jpg" data-count="7/12" data-mfp-src="images/album/d-and-m-4-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">9/12</span>
+          </div>
+          <div class="image-container image-container--40-60">
+            <img class="gallery__image" src="images/placeholder-min.jpg" data-count="9/12" data-src="images/album/d-and-m-12-min.jpg" data-mfp-src="images/album/d-and-m-12-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">10/12</span>
+          </div>
+          <div class="image-container image-container--1up">
+            <img class="gallery__image" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-9-min.jpg" data-count="8/12" data-mfp-src="images/album/d-and-m-9-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">11/12</span>
+          </div>
+          <div class="image-container image-container--1up">
+            <img class="gallery__image" src="images/placeholder-min.jpg" data-src="images/album/d-and-m-11-min.jpg" data-count="12/12" data-mfp-src="images/album/d-and-m-11-min.jpg" alt="Daniel and Mirandas Wedding" />
+            <span class="gallery__count">12/12</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="next-album" class="next-album">
+        <a href="#" class="next-album__link">
+          <div class="container">
+            <div class="col col-md-8">
+              <div class="next-album__image" style="background-image: url('images/work/rachel-and-tony-2.jpg');">
+              </div>
+            </div>
+            <div class="col col-md-3 col-md-offset-1">
+              <div class="cta-container">
+                <h4 class="cta__title">Grant &amp; Katy
+                  <span class="cta__link">
+                    Next Album
+                  <span>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      @include("includes/footer.html")
+
+    </div>
+
+    @include("includes/js-block.html")
+
+    <script>
+      var timeOut;
+      function scrollToTop() {
+        if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
+          window.scrollBy(0,-50);
+          timeOut=setTimeout('scrollToTop()',10);
+        }
+        else clearTimeout(timeOut);
+      }
+    </script>
+  </body>
+</html>

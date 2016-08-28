@@ -1,0 +1,148 @@
+/**
+ *  Define the navigation styles.
+ *
+ */
+
+.nav-header {
+  position: relative;
+  z-index: 10;
+  padding: 30px 0;
+}
+
+.nav-toggle {
+  display: block;
+  float: right;
+  margin-top: 5px;
+  margin-right: 0.5em;
+
+  &:hover,
+  &:active,
+  &:focus {
+    .toggle-line {
+      &:nth-child(3) {
+        width: 30px;
+      }
+    }
+  }
+
+  @include min($tablet) {
+    display: none;
+  }
+}
+
+.toggle-line {
+  display: block;
+  transform: none;
+  content: '';
+  background: $black;
+  width: 30px;
+  height: 3px;
+  margin-bottom: 6px;
+  transition: width 0.25s ease;
+
+  &:nth-child(3) {
+    width: 20px;
+  }
+}
+
+.nav-header--alt {
+  padding: 40px 0 15px;
+}
+
+.nav {
+  display: none;
+  margin: 2em -15px 0;
+  background: $off-white;
+
+  @include min($tablet) {
+    display: block;
+    float: right;
+    margin: 0;
+    background: none;
+  }
+
+  &.is-visible {
+    display: block;
+  }
+}
+
+.brand__link {
+  color: $primary;
+  font-family: $sans-header;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  -webkit-font-smoothing: antialiasing;
+
+  @include min($tablet) {
+    font-size: 2rem;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  margin-top: 8px;
+  padding: 2em 20px;
+  font-size: 1.3rem;
+  font-family: $sans;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $black;
+  font-weight: 700;
+  transition: all 0.2s ease;
+
+  @include min($tablet) {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0 15px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $white;
+    background: $primary-light;
+
+    @include min($tablet) {
+      &:before {
+        top: -15px;
+        background: $primary-light;
+      }
+
+      &:after {
+        bottom: -15px;
+        background: $primary-light;
+      }
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    height: 15px;
+    width: 100%;
+    background: transparent;
+    transition: all 0.25s ease;
+  }
+
+  &:before {
+    top: -5px;
+  }
+
+  &:after {
+    bottom: -5px;
+  }
+}
