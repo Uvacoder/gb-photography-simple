@@ -131,6 +131,10 @@
   box-shadow: 0 2px 3px rgba($black, 0.3);
   will-change: transform;
 
+  @include min($tablet) {
+    height: 600px;
+  }
+
   &:nth-child(1) {
     transform: translateX(-25%) rotate(-0.1deg);
     top: 2%;
