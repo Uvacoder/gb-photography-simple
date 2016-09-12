@@ -1,0 +1,32 @@
+// SITE
+$site-width:  1110px;
+$site-gutter: 7.5%;
+
+// BREAKPOINTS
+$iphone: 640px;
+$tablet:  768px;
+$desktop: 992px;
+$large: 1200px;
+$xlarge: 1400px;
+$xxlarge: 1600px;
+
+// Responsive Grid
+$container-xl: 1374px;
+
+// FONTS
+$sans: "Karla", sans-serif;
+$sans-header: 'Muli', sans-serif;
+$serif: "Playfair Display", serif;
+
+// COLORS
+$white: #fff;
+$off-white: #f4f4f4; //rgba(244, 244, 244, 100)
+$grey: #D5C7BC;
+//$black: #444545; //rgba(68, 69, 69, 100)
+$black: #585858;
+$primary: #F7947E; //rgba(234, 158, 141, 100)
+$primary-light: #f5a896;
+$primary-lightest: #FFC9B5;
+$tan: #ebe9e9; //rgba(235, 233, 233, 100)
+$text-alt: #825d54;
+$text-shadow: #de9380;

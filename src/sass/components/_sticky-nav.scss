@@ -1,0 +1,127 @@
+/**
+ *  Define the sticky navigation styles.
+ */
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0.5em 0;
+  transform: translateY(-75px);
+  background: $white;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba($black, 0.3);
+  transition: all 0.7s ease;
+
+  @include min($tablet) {
+    padding: 0.55em 0;
+  }
+
+  &.is-visible {
+    transform: translateY(0);
+  }
+
+  &.album-finished {
+    background: $off-white;
+
+    progress::-webkit-progress-value {
+      background-color: $off-white;
+    }
+
+    progress::-moz-progress-bar {
+      background-color: $off-white;
+    }
+  }
+
+  .sticky-nav__back,
+  .sticky-nav__album,
+  .sticky-nav__to-top {
+    position: relative;
+    z-index: 10;
+  }
+
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: $primary-light;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+  transition: background-color 0.3s ease; 
+}
+
+progress::-webkit-progress-value {
+  background-color: $primary-light;
+  transition: background-color 0.3s ease;
+}
+
+progress::-moz-progress-bar {
+  background-color: $primary-light;
+  transition: background-color 0.3s ease;
+}
+
+.sticky-nav__back,
+.sticky-nav__to-top {
+  padding-top: 0.4em;
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+
+  @include min($tablet) {
+    font-size: 1.4rem;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: $tan;
+  }
+
+  &:focus {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.sticky-nav__back {
+  display: none;
+  float: left;
+  color: $black;
+
+  @include min($tablet) {
+    display: block;
+  }
+}
+
+.sticky-nav__to-top {
+  display: inline-block;
+  float: right;
+}
+
+.sticky-nav__album {
+  display: inline-block;
+  float: left;
+  color: $black;
+  font-family: $sans-header;
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  @include min($tablet) {
+    float: none;
+    font-size: 2.2rem;
+  }
+}

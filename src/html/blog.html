@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  
+  @include("includes/head.html")
+  
+  <body>
+    <div id="main" class="main main--gallery">
+
+      <div class="blog-landing-container">
+        <div id="album-cover" class="album-cover">
+          <header class="album-info-container">
+            <div class="album-info">
+              <h1 class="album-cover__title">
+                Blog
+              </h1>
+            </div>
+          </header>
+        </div>
+      </div>
+
+      @include("includes/navigation.html")
+
+      <section class="blog">
+        <div class="container">
+          <div class="blog-item">
+            <div class="col col-md-7">
+              <div class="excerpt__preview-image" style="background-image: url('https://static.wixstatic.com/media/37e44a_20791b81734848bc8b34f475c860ba04.jpg/v1/fill/w_777,h_518,al_c,q_90,usm_0.66_1.00_0.01/37e44a_20791b81734848bc8b34f475c860ba04.jpg');">
+              </div>
+            </div>
+            <div class="col col-md-5">
+              <article class="blog__excerpt blog__excerpt--listing">
+                <span class="blog-post__date">Feb 23, 2016</span>
+                <h3 class="excerpt__title">
+                  Katy &amp; Grant's Sawyer, Michigan Engagement
+                </h3>
+                <p class="excerpt__body">
+                  Curabitur imperdiet magna eros, ut maximus dui pellentesque finibus. Suspendisse sed sapien quis lectus dictum scelerisque tempor at purus.
+                </p>
+                <a class="excerpt__link read-more" href="blog-post.html">
+                  Keep Reading
+                </a>
+              </article>
+            </div>
+          </div>
+          <div class="blog-item">
+            <div class="col col-md-7">
+              <div class="excerpt__preview-image" style="background-image: url('images/work/dan-and-miranda.jpg');">
+              </div>
+            </div>
+            <div class="col col-md-5">
+              <article class="blog__excerpt blog__excerpt--listing">
+                <span class="blog-post__date">Feb 23, 2016</span>
+                <h3 class="excerpt__title">
+                  Daniel &amp; Miranda's Wedding
+                </h3>
+                <p class="excerpt__body">
+                  Curabitur imperdiet magna eros, ut maximus dui pellentesque finibus. Suspendisse sed sapien quis lectus dictum scelerisque tempor at purus.
+                </p>
+                <a class="excerpt__link read-more" href="#">
+                  Keep Reading
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @include("includes/footer.html")
+
+    </div>
+
+    @include("includes/js-block.html")
+    
+  </body>
+</html>
