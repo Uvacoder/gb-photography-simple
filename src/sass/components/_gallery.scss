@@ -145,9 +145,15 @@
   }
 
   .ampersand {
-    top: -10px;
-    font-size: 2rem;
-    letter-spacing: 1px;
+
+    @include min($tablet) {
+      top: -5px;
+      font-size: 2rem;
+    }
+
+    @include min($large) {
+      top: -10px;
+    }
   }
 }
 
@@ -157,6 +163,7 @@
   margin: 0 0.1em;
   font-size: 1.6rem;
   font-family: $serif;
+  letter-spacing: 1px;
   // font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }

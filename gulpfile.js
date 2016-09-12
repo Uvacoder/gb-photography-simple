@@ -193,7 +193,7 @@ gulp.task('build', ['clean'], () => {
   fs.mkdirSync('dist/js')
 
   // run the tasks
-  gulp.start('html-includes', 'html', 'html-includes', 'sass', 'js', 'js-lib', 'images', 'fonts', 'videos', 'favicon')
+  gulp.start('html', 'html-includes', 'sass', 'js', 'js-lib', 'images', 'fonts', 'videos', 'favicon')
 })
 
 gulp.task('default', ['build', 'server', 'watch'])
