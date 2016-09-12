@@ -51,7 +51,7 @@
     var $stickyNav = $('.sticky-nav');
 
     var waypoint = new Waypoint({
-      element: document.getElementById('album-cover__type'),
+      element: document.getElementById('js-gallery'),
       handler: function(direction) {
         if (direction === 'down') {
           $stickyNav.addClass('is-visible');
